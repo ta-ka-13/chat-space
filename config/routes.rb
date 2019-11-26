@@ -2,9 +2,13 @@ Rails.application.routes.draw do
   
   devise_for :users
   devise_for :models
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html  
-  root to: 'messages#index'
-  resource :users, only: [:index, :edit, :update]
-  resource :groups, only: [:edit, :update, :new, :create]
-  resource :message, only:[:index, :create]
+  root 'groups#index'
+  # root to: 'messages#index'
+  resources :users, only: [:index,:edit, :update]
+  resources :groups, only: [:edit, :update, :new, :create] do
+    resources :messages, only: [:index, :create]
+
+
+  end
+
 end
