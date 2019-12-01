@@ -1,23 +1,24 @@
--# .wrapper
+.wrapper
 
--#   = render 'shared/side_bar'
+  .index
+   
+    = render 'shared/side_bar'
+   
+  .messages
 
-.messages
-  =render partial: 'message', collection: @messages
+    =render partial: 'message', collection: @messages
+    -# =render partial: 'message', collection: @messages
 
   .chat
     .header
       .left-header
         .left-header__title
-          グループ名
+          .group__name
+            = @group
         %ul.left-header__members
           Member：
           %li.member
-            メンバー名
-          %li.member
-            メンバー名
-          %li.member
-            メンバー名
+            = @user
       .right-header
         .right-header__button
           Edit
@@ -31,37 +32,27 @@
         .lower-meesage
           .lower-message__content
             
-      .message
-        .upper-message
-          .upper-message__user-name
-          
-          .upper-message__date
-            
-        .lower-meesage
-          .lower-message__content
-            
-      .message
-        .upper-message
-          .upper-message__user-name
-            
-          .upper-message__date
-            
-        .lower-meesage
-          .lower-message__content
-    .form
-      = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-        .form__mask
-          = f.label :image, class: 'form__mask__image' do
-            = icon('fas', 'image', class: 'icon')
-            = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'form__submit'
+        .form
+          = form_for [@group, @message] do |f|
+            = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+            .form__mask
 
-    -# .form
-    -#   %form
-    -#     %input.form__message
-    -#     .form__mask
-    -#       %label.form__mask__image
-    -#         = fa_icon 'picture-o', class: 'icon'
-    -#         %input.hidden{type: 'file'}
-    -#     %input.form__submit{type: 'submit', value: 'Send'}
+              = f.label :image, class: 'form__mask__image' do
+                -# = icon('fas', 'image', class: 'icon')
+
+                = f.file_field :image, class: 'hidden'
+
+                = f.submit 'Send', class: 'form__submit'
+
+
+      -# .form
+      -#   %form
+      -#     %input.form__message
+      -#     .form__mask
+
+      -#       %label.form__mask__image
+      -#         = fa_icon 'picture-o', class: 'icon'
+
+      -#         %input.hidden{type: 'file'}
+
+      -#     %input.form__submit{type: 'submit', value: 'Send'}

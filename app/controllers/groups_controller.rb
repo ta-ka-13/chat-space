@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
 
   before_action :set_group, only: [:edit, :update]
-
+  
   def index
   end
 
@@ -9,10 +9,11 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
     @group.users << current_user
-    # @users = @group.users.where.not(id: current_user.id)
+    @users = @group.users.where.not(id: current_user.id)
   end
 
   def create
+   
     @group = Group.new(group_params)
 
     if @group.save
@@ -40,7 +41,7 @@ class GroupsController < ApplicationController
 private
 
  def group_params
-
+ 
   params.require(:group).permit(:name, user_ids: [])
  end
 
