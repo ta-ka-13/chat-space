@@ -1,12 +1,56 @@
 $(function(){
-  // console.log("aa")
+
+  function buildHTML(message){
+    // 「もしメッセージに画像が含まれていたら」という条件式
+    if (message.image) {
+      var html = //メッセージに画像が含まれる場合のHTMLを作る
+      `<div class="message" data-message-id=${message.id}>
+      <div class="upper-message">
+        <div class="upper-message__user-name">
+          ${message.user_name}
+        </div>
+        <div class="upper-message__date">
+          ${message.date}
+        </div>
+      </div>
+      <div class="lower-message">
+        <p class="lower-message__content">
+          ${message.content}
+        </p>`
+      return html;
+
+    } else {
+
+      var html =
+      `<div class="message" data-message-id=${message.id}>
+      <div class="upper-message">
+        <div class="upper-message__user-name">
+          ${message.user_name}
+        </div>
+        <div class="upper-message__date">
+          ${message.date}
+        </div>
+      </div>
+      <div class="lower-message">
+        <p class="lower-message__content">
+          ${message.content}
+        </p>
+      </div>
+    </div>`
+    return html;
+    };
+  }
+
+
+
+
   $('.new_message').on('submit',function(e){
     e.preventDefault()
-// console.log("test");
+
     var formData = new FormData(this);
-// console.log(formData)
+
     var url = $(this).attr('action')
-console.log(url); 
+ 
 
 
     $.ajax({
@@ -17,13 +61,21 @@ console.log(url);
       processData: false,
       contentType: false
     })
+    
     .done(function(data){
-      var html = buildHTML(data);
-      $('.message').apend(html);
-      $('lower-message__content').val('');
+      var html = "";
+    
+      html = buildHTML(data);
+      $('.messages').append(html);
+      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight},'fast');
+      $('.messages').animate({'height' : '500px'});
+      $('.lower-message__content').val('');
+      $('form')[0].reset();
+      $('.form__submit').prop('disabled', false);
     })
     .fail(function(){
       alert('error')
+      return false;
     });
   });
 });

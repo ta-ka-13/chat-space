@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
 
 
   def create
-    # binding.pry
+  
     @message = @group.messages.new(message_params)
 
     
