@@ -1,44 +1,33 @@
-  .wrapper
-    = render 'shared/side_bar'
-    .chat
-      .header
-        .left-header
-          .left-header__title
-        .groups
-          - current_user.groups.each do |group|
-            .group
-              = link_to group_messages_path(group) do
-                .group__name
-                = @group.name
-          %ul.left-header__members
-            menber: 
+.wrapper
+  = render 'shared/side_bar'
+  .chat
+    .header
+      .left-header
+        .left-header__title
+      .groups
+        - current_user.groups.each do |group|
+          .group
+            = link_to group_messages_path(group) do
+              .group__name
+              = @group.name
+        %ul.left-header__members
+          menber: 
               
               
-            %li.member
-              - @group.group_users.each do |group_user|
-                = group_user.user.name
-        .right-header
-          = link_to 'Edit', "/groups/#{@group.id}/edit", method: :get 
-          .right-header__button
+          %li.member
+            - @group.group_users.each do |group_user|
+              = group_user.user.name
+      .right-header
+        = link_to 'Edit', edit_group_path(@group), class: 'get'
+        .right-header__button
             
-      .messages
-        =render @messages
-        -# .message
-        -#   .upper-message
-        -#     .upper-message__user-name
-              
-        -#     .upper-message__date
-              
-        -#     .lower-meesage
-            
-        -#       .lower-message__content
-      .form
-        = form_for [@group, @message] do |f|
-          = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-          .form__mask
-            = f.label :image, class: 'form__mask__image' do
-              -# = icon(image', class: 'icon')
-              = fa_icon 'image', class: 'icon'
-              -# = f.file_field 'image'
-              = f.file_field :image, class: 'hidden'
-          = f.submit 'SEND', class: 'form__submit'
+    .messages
+      =render @messages
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'image', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'SEND', class: 'form__submit'
