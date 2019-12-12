@@ -4,7 +4,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  # storage :file
+  storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -22,7 +22,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   process resize_to_fit: [800, 800]
+  # process :convert => 'jpg'
 
+  # def filename
+  #   super.chomp(File.extname(super)) + '.jpg' if original_filename.present?
+  # end
 
   # Process files as they are uploaded:
   # process scale: [200, 300]
@@ -45,6 +49,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   # def filename
-  #   "something.jpg" if original_filename
+    # "something.jpg" if original_filename
   # end
 end
