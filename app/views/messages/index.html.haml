@@ -11,31 +11,34 @@
               .group__name
               = @group.name
         %ul.left-header__members
-          menber:
+          menber: 
             
              
           %li.member
-            = current_user.name
+            - @group.group_users.each do |group_user|
+              = group_user.user.name
       .right-header
         = link_to 'Edit', "/groups/#{@group.id}/edit", method: :get 
         .right-header__button
           
     .messages
-      =render partial: 'message', collection: @messages
-      .message
-        .upper-message
-          .upper-message__user-name
+      =render @messages
+      -# .message
+      -#   .upper-message
+      -#     .upper-message__user-name
             
-          .upper-message__date
+      -#     .upper-message__date
             
-          .lower-meesage
+      -#     .lower-meesage
           
-            .lower-message__content
+      -#       .lower-message__content
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .form__mask
           = f.label :image, class: 'form__mask__image' do
-            -# = f.file_field :imag, 'picture-o', class: 'icon'
+            -# = icon(image', class: 'icon')
+            = fa_icon 'image', class: 'icon'
+            -# = f.file_field 'image'
             = f.file_field :image, class: 'hidden'
-            = f.submit 'SEND', class: 'form__submit'
+        = f.submit 'SEND', class: 'form__submit'
