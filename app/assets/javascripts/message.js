@@ -1,11 +1,39 @@
   $(function(){
+    var reloadMessages = function() {
+    last_message_id = $('.message:last').data("message-id");
+    console.log(last_message_id);
+  
+      $.ajax({
+        url: "api/messages",
+        type: 'GET',
+        dataType: 'json',
+        data: {id: last_message_id} 
+      })
+      .done(function (messages) {
+        if (messages.length !== 0) {
+          var insertHTML = '';
+          $.each(messages, function (i,message) {
+            insertHTML += buildHTML(message)
+          });
+          $('.messages').append(insertHTML);
+          $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+          $('.messages').animate({'height' : '1230px'});
+          $("#new_message")[0].reset();
+          $(".form__submit").prop("disabled", false);
+        }
+      })
+      .fail(function () {
+        
+        console.log('errer');
+     
+      });
+    }; 
 
     function buildHTML(message){
-
       if (message.image) {
         var html = 
         `<div class="message" data-message-id=${message.id}>
-        <div class="upper-message">
+          <div class="upper-message">
           <div class="upper-message__user-name">
             ${message.user_name}
           </div>
@@ -69,13 +97,17 @@
         html = buildHTML(data);
         $('.messages').append(html);
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight},'fast');
-        $('.messages').animate({'height' : '500px'});
+        $('.messages').animate({'height' : '1230px'});
         $('form')[0].reset();
         $('.form__submit').prop('disabled', false);
       })
       .fail(function(){
         alert('error')
         return false;
-      });
+      });      
     });
+    if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+      setInterval(reloadMessages, 7000);
+      console.log(7000);
+      }
   });

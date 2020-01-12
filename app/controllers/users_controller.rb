@@ -17,20 +17,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def destroy
-  user = User.find(params[:id])
-  user.destroy == current_user.id
-  # redirect_to controller: :minis, action: :index
-end
-
-
-
-
-
-
-
-
-
   def update
     if current_user.update(user_params)
       redirect_to root_path

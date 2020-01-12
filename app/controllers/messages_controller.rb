@@ -17,6 +17,7 @@ class MessagesController < ApplicationController
       
 
         if @message.save
+          
           respond_to do |format|
             format.html { redirect_to group_messages_path(@group) }
             format.json

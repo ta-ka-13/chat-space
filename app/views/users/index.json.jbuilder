@@ -5,3 +5,8 @@ json.array! @users do |user|
   
   
 end
+
+json.array! @groups do |group|
+  json.group.id group.id
+  
+end
