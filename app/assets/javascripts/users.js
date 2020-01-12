@@ -55,7 +55,6 @@ $(function() {
       });
   });
   $("#user-search-result").on("click", ".chat-group-user__btn--add", function() {
-    console.log
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this)
@@ -66,7 +65,6 @@ $(function() {
   });
 
   $("#chat-group-users").on("click", ".chat-group-user__btn--remove", function() {
-    console.log("test")
     $(this)
       .parent()
       .remove();
