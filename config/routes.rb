@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   devise_for :models
   root 'groups#index'
 
-  # root 'groups#edit'
   resources :users, only: [:index,:edit, :update]
   resources :edit, only: [:group]
   resources :groups, only: [:edit, :update, :new, :create] do

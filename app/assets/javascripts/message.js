@@ -1,7 +1,6 @@
   $(function(){
     var reloadMessages = function() {
     last_message_id = $('.message:last').data("message-id");
-    console.log(last_message_id);
   
       $.ajax({
         url: "api/messages",
@@ -17,14 +16,13 @@
           });
           $('.messages').append(insertHTML);
           $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-          $('.messages').animate({'height' : '1230px'});
           $("#new_message")[0].reset();
           $(".form__submit").prop("disabled", false);
         }
       })
       .fail(function () {
         
-        console.log('errer');
+        window.alert('errer');
      
       });
     }; 
@@ -97,7 +95,6 @@
         html = buildHTML(data);
         $('.messages').append(html);
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight},'fast');
-        $('.messages').animate({'height' : '1230px'});
         $('form')[0].reset();
         $('.form__submit').prop('disabled', false);
       })
@@ -108,6 +105,5 @@
     });
     if (document.location.href.match(/\/groups\/\d+\/messages/)) {
       setInterval(reloadMessages, 7000);
-      console.log(7000);
       }
   });

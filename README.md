@@ -64,7 +64,6 @@ Things you may want to cover:
 |image|string||
 |user_id|references|null: false, foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
-|user_name|references|null: false, foreign_key: true|
 ## Association
 - belong_to :group
 - belong_to :user 
