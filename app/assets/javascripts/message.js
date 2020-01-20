@@ -40,7 +40,9 @@
         <div class="lower-message">
           <p class="lower-message__content">
             ${message.content}
-          </p>`
+          </p>
+          <img src=${message.image} >
+          </div>`
         return html;
 
       } else {
