@@ -7,8 +7,7 @@
       .groups
         - current_user.groups.each do |group|
           .group
-            = link_to group_messages_path(group) do
-              .group__name
+            = form_for group_messages_path(group) do
               = @group.name
         %ul.left-header__members
           menber: 

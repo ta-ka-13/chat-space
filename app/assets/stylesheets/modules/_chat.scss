@@ -29,12 +29,14 @@
       float: right;
       height: 40px;
       line-height: 40px;
-      margin-top: 28px;
+      margin-top: -70px;
       padding: 0 20px;
+    &__right-header__button{
+      color: $light_blue;
       
-      &__button {
-        color: $light_blue;
-        text-decoration: none;
+      // &__button {
+      //   color: $light_blue;
+      //   text-decoration: none;
       }
     }
   }
@@ -109,8 +111,8 @@
       float: right;
       font-size: 16px;
       height: 50px;
-      margin-left: 10px;
-      padding:10 40px;
+      margin-left: 15px;
+      padding:0 30px;
     }
   }
 }
