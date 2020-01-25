@@ -12,11 +12,15 @@
         font-size: 20px;
         margin-top: 35px;
       }
+      // &__group {
+      //   margin-top: 30px;
+      //   font-size: 90px;
+      // }
       &__members {
         @include flexbox;
         color: $light_gray;
         font-size: 12px;
-        margin-top: 15px;
+        margin-top: 40px;
         .member {
           display: inline-block;
           padding-right: 5px;
@@ -29,8 +33,8 @@
       float: right;
       height: 40px;
       line-height: 40px;
-      // margin-top: -70px;
-      margin-top: -50px;
+      // margin-top: -100px;
+      margin-top: -70px;
       padding: 0 20px;
     &__right-header__button{
       color: $light_blue;
@@ -82,7 +86,9 @@
     box-sizing: border-box;
     height: 90px;
     padding: 20px 50px 20px 40px;
-    
+    // position: absolute;
+    // bottom: 0;
+    position: initial;
     
     &__message {
       border: none;
@@ -112,8 +118,43 @@
       float: right;
       font-size: 16px;
       height: 50px;
-      margin-left: 15px;
-      padding:0 30px;
+      width: 100px;
+      margin-left: 1px;
+      padding:80 60px;
     }
   }
 }
+
+// .group{
+  // margin-top: 50px;
+  // margin-left: 90px;
+  // margin-right: 70px;
+  // margin-bottom: 10px;
+  // margin: auto;
+  // height: 0px;
+  // font-size: 70;
+  // padding: 200 20px;
+  // margin-bottom: 4px;
+  // line-height: 40px;
+  // position:absolute;
+  // bottom:90;
+  // transform:translateX(-50%);
+  // vertical-align:bottom;
+  // display: table-cell;
+  // display: inline-block;
+  // font-weight: bold;
+  // padding: 2px;
+  // padding: 9px 3px 6px;
+// }
+
+.group {
+  // border: 1px solid $light_blue;
+  // color: $light_blue;
+  // float: right;
+  // height 40px;
+  // line-height: 40px;
+  // margin-top: -70px;
+  // margin-top: -50px;
+  // padding: 5px 5px 5px;
+}
+
