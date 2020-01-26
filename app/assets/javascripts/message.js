@@ -16,6 +16,7 @@
           });
           $('.messages').append(insertHTML);
           $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+          $(".form__submit").prop("disabled", false);
         }
       })
       .fail(function () {
@@ -77,7 +78,7 @@
       var formData = new FormData(this);
 
       var url = $(this).attr('action')
-  
+      $("#new_message.new_message")[0].reset();
 
 
       $.ajax({

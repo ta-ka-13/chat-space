@@ -121,6 +121,9 @@
       width: 100px;
       margin-left: 1px;
       padding:80 60px;
+      // margin-left: 15px;
+      // padding:0 30px;
+
     }
   }
 }
@@ -151,6 +154,9 @@
   // border: 1px solid $light_blue;
   // color: $light_blue;
   // float: right;
+  display: table-cell;
+  // padding: 2px;
+    // float: left;
   // height 40px;
   // line-height: 40px;
   // margin-top: -70px;
@@ -158,3 +164,6 @@
   // padding: 5px 5px 5px;
 }
 
+// .left-header__title {
+//   font-size: 7px;
+// }
