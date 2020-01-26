@@ -14,7 +14,7 @@
     }
     &__lists {
       display: inline-block;
-      float: right;
+      // float: right;
       .list {
         display: inline-block;
       }
@@ -27,8 +27,8 @@
 
   .groups {
     background-color: $side_blue_light;
-    // height: calc(100vh - 100px);
-    height: 800px;
+    height: calc(100vh - 100px);
+    // height: 800px;
     padding: 0 20px;
     .group {
       box-sizing: border-box;
