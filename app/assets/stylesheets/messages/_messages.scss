@@ -1,3 +1,6 @@
 .wrapper {
   @include flexbox;
+
+  padding-bottom: 90px;
+  // box-sizing: border-box;
 }
