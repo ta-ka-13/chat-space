@@ -22,7 +22,7 @@
       .fail(function () {
         
         alert('errer');
-     
+        return html;
       });
     }; 
 
@@ -99,10 +99,10 @@
         $('form')[0].reset();
         $('.form__submit').prop('disabled', false);
       })
-      .fail(function(){
+      .fail(function(data){
         alert('error')
-        return false;
-      });      
+        $(".form__submit").prop("disabled", false);
+      });
     });
     if (document.location.href.match(/\/groups\/\d+\/messages/)) {
       setInterval(reloadMessages, 7000);
