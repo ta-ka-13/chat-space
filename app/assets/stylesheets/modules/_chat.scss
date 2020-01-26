@@ -90,6 +90,8 @@
     // position: relative;
     bottom: 0;
     // position: initial;
+    // width: 1512px;
+    width: calc(100% - 300px);
     
     &__message {
       border: none;
