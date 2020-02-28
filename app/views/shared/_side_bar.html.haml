@@ -12,6 +12,7 @@
   .groups
     - current_user.groups.each do |group|
       .group
+        グループ名
         = link_to group_messages_path(group) do
           .group__name
             =group.name
