@@ -9,10 +9,9 @@
           .group
             = form_for group_messages_path(group) do
               = @group.name
+              -# = current_group.name
         %ul.left-header__members
-          menber: 
-              
-              
+          menber:
           %li.member
             - @group.group_users.each do |group_user|
               = group_user.user.name

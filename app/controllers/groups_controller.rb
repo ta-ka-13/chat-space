@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
 
-  before_action :set_group, only: [:edit, :update]
+  before_action :set_group, only: [:edit, :update, :destroy]
   
   def index
 
@@ -37,6 +37,12 @@ class GroupsController < ApplicationController
     end
 
   end
+
+def destroy
+
+  @group.destroy
+  redirect_to root_path
+end
 
 
 private
