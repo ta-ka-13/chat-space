@@ -36,8 +36,24 @@ class MessagesController < ApplicationController
 
         message = Message.find(params[:id])
         message.destroy
-        redirect_to group_messages_path(@group)
+        # redirect_to group_messages_path(@group)
         
+        
+        # if @message.destroy
+          
+        #   respond_to do |format|
+        #     format.html { redirect_to group_messages_path(@group) }
+        #     format.json
+        #   end
+
+        # else
+        #   @messages = @group.messages.includes(:user)
+        #   flash.now[:alert] = 'メッセージを入力してください'
+        #   render :index
+        # end
+
+
+
       end
 
 
