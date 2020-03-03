@@ -39,7 +39,6 @@ class GroupsController < ApplicationController
   end
 
 def destroy
-
   @group.destroy
   redirect_to root_path
 end
