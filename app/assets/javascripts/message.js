@@ -84,7 +84,6 @@
     }
 
 
-//     e.preventDefault();
     $('.new_message').on('submit',function(e){
       e.preventDefault()
 
