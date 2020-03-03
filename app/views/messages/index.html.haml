@@ -5,11 +5,9 @@
       .left-header
         .left-header__title
       .groups
-        - current_user.groups.each do |group|
-          .group
-            = form_for group_messages_path(group) do
-              = @group.name
-              -# = current_group.name
+        グループ名
+        .group
+          = @group.name
         %ul.left-header__members
           menber:
           %li.member
