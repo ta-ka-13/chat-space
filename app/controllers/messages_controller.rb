@@ -34,8 +34,8 @@ class MessagesController < ApplicationController
 
       def destroy
 
-        message = Message.find(params[:id])
-        message.destroy
+        @message = @group.messages.find(params[:id])
+        @message.destroy
         # redirect_to group_messages_path(@group)
         
         

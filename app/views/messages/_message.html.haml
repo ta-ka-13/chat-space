@@ -4,6 +4,9 @@
       = message.user.name
     .upper-message__date
       = message.created_at.strftime("%Y/%m/%d %H:%M:%S")
+      %p.delete_id
+        Delete
+        
   .lower-message
     -# = link_to '削除', "/groups/#{@group.id}/messages/#{message.id}", method: :delete
     - if message.content.present?
@@ -11,6 +14,5 @@
         = message.content
 
   .content__message__edit-and-delete-btn
-    %p.delete_id
-      Delete
+
     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

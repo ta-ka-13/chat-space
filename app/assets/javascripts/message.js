@@ -36,6 +36,9 @@
           </div>
           <div class="upper-message__date">
             ${message.date}
+              <p class= "delete_id">
+                Delete
+              </p>
           </div>
         </div>
         <div class="lower-message">
@@ -64,6 +67,9 @@
           </div>
           <div class="upper-message__date">
             ${message.date}
+            <p class= "delete_id">
+              Delete
+            </p>
           </div>
         </div>
         <div class="lower-message">

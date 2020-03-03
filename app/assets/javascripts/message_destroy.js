@@ -3,7 +3,7 @@ $(function() {
     e.preventDefault();
     var deleteMessage = confirm('削除してよろしいでしょうか？');
     if(deleteMessage == true) {
-      var message_element = $(this).parents('.content');
+      var message_element = $(this).parents('.message');
       var message_id = message_element.attr("data-message-id");
       var url = location.href + "/" + message_id;
     $.ajax({
