@@ -51,12 +51,6 @@
         return html;
 
 
-
-
-
-
-
-
       } else {
 
         var html =
