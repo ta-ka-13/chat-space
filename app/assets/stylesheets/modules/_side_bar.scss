@@ -54,6 +54,7 @@
 
     position: fixed !important;
     // position: absolute;
+    text-decoration: none;
     top: 100px;
 
     left: 0px;
@@ -63,6 +64,7 @@
     .group {
       box-sizing: border-box;
       padding: 20px 0 40px;
+      
       &__name {
         font-size: $side_group_name;
         color: $white;
