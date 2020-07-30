@@ -17,7 +17,7 @@
 
 
 # 使用技術:application technology
-#### Ruby on Rails(5),Font-Awesome-Rails,line-bot-api,Heroku,GitHub
+#### Ruby on Rails(5),GitHub
 
 # 課題:issues in the future
 
