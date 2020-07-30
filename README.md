@@ -1,7 +1,7 @@
 # README
 
 # 名前:application name
-## Line Todo App
+## chat space Custom
 
 # 概要:overview
 
@@ -17,7 +17,7 @@
 
 
 # 使用技術:application technology
-#### Ruby on Rails(6.0.3.2),Font-Awesome-Rails,line-bot-api,Heroku,GitHub
+#### Ruby on Rails(5),Font-Awesome-Rails,line-bot-api,Heroku,GitHub
 
 # 課題:issues in the future
 
