@@ -1,7 +1,5 @@
 # README
 
-# README
-
 # 名前:application name
 ## Line Todo App
 
