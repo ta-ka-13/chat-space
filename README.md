@@ -4,6 +4,8 @@
 ## chat space Custom
 
 # 概要:overview
+テストアカウントアドレス：i@i.com
+パスワード：12345678
 
 # スクリーンショット:screenshot
 
