@@ -26,7 +26,7 @@
 
 
 # アプリケーションリンク先:application link
-
+http://3.113.68.147/users/sign_in
 
 
 # chat-space CB設計
