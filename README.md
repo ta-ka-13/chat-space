@@ -17,7 +17,7 @@
 
 # 工夫したポイント:devised
 
-#追加機能: Additional features
+# 追加機能: Additional features
 ・メッセージ削除機能
 ・グループ削除機能
 
