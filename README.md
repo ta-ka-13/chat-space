@@ -17,6 +17,9 @@
 
 # 工夫したポイント:devised
 
+#追加機能: Additional features
+・メッセージ削除機能
+・グループ削除機能
 
 # 使用技術:application technology
 #### Ruby on Rails(5),GitHub
