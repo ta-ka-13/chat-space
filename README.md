@@ -1,27 +1,37 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 名前:application name
+## chat space Custom
 
-Things you may want to cover:
+# 概要:overview
+テストアカウントアドレス：i@i.com
+パスワード：12345678
 
-* Ruby version
+# スクリーンショット:screenshot
 
-* System dependencies
+# gif
 
-* Configuration
+# 本番環境:production environment
 
-* Database creation
+# 目的:purpose
 
-* Database initialization
+# 工夫したポイント:devised
 
-* How to run the test suite
+# 追加機能: Additional features
+・メッセージ削除機能
+・グループ削除機能
 
-* Services (job queues, cache servers, search engines, etc.)
+# 使用技術:application technology
+#### Ruby on Rails(5),GitHub
 
-* Deployment instructions
+# 課題:issues in the future
 
-* ...
+
+# 実装予定の機能:implementation plan
+
+
+# アプリケーションリンク先:application link
+http://3.113.68.147/users/sign_in
 
 
 # chat-space CB設計

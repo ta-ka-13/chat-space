@@ -2,11 +2,29 @@
   box-sizing: border-box;
   color: $white;
   width: 300px;
+  // position: relative;
+
+    // position: fixed !important;
+    // position: absolute;  
+    
+
+
+
   .header {
     background-color: $side_blue_dark;
     height: 100px;
     line-height: 100px;
     padding: 0 20px;
+
+    position: fixed !important;
+    position: absolute;  
+    top: 0;
+
+    width: 260px;
+    
+
+
+
     &__name {
       display: inline-block;
       font-size: $side_header_font;
@@ -14,6 +32,7 @@
     }
     &__lists {
       display: inline-block;
+      float: right;
       .list {
         display: inline-block;
       }
@@ -26,17 +45,34 @@
 
   .groups {
     background-color: $side_blue_light;
-    height: calc(100vh - 100px);
+    // height: calc(100vh - 100px);
+    // height: 800px;
     padding: 0 20px;
+
+    // height: 100%;
+    height: 100vh;
+
+    position: fixed !important;
+    // position: absolute;
+    text-decoration: none;
+    top: 100px;
+
+    left: 0px;
+    width: 260px;
+    // top: 100;
+
     .group {
       box-sizing: border-box;
       padding: 20px 0 40px;
+      
       &__name {
         font-size: $side_group_name;
+        color: $white;
       }
       &__message {
         font-size: $side_group_message;
         margin-top: 5px;
+        color: $white;
       }
     }
   }
